@@ -1,0 +1,43 @@
+{
+  "@@locale": "en",
+  "appTitle": "Tech App",
+  "loginWelcomeTitle": "Welcome!",
+  "loginWelcomeSubtitle": "Sign in to continue",
+  "loginEmailLabel": "Email",
+  "loginPasswordLabel": "Password",
+  "validationEmailRequired": "Enter your email",
+  "validationEmailInvalid": "Enter a valid email",
+  "validationPasswordRequired": "Enter your password",
+  "validationPasswordMinLength": "Password must be at least 8 characters",
+  "loginButton": "Sign in",
+  "loginOrDivider": "or",
+  "loginWithGoogle": "Sign in with Google",
+  "tooltipShowPassword": "Show password",
+  "tooltipHidePassword": "Hide password",
+  "homeTitle": "Home",
+  "settingsTitle": "Settings",
+  "homeGreeting": "Hi, {firstName}",
+  "@homeGreeting": {
+    "placeholders": {
+      "firstName": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBusinessesTitle": "My businesses",
+  "businessStatusActive": "Active",
+  "businessStatusInactive": "Inactive",
+  "settingsSectionAppearance": "Appearance",
+  "settingsSectionLanguage": "Language",
+  "settingsSectionAccount": "Account",
+  "settingsThemeLight": "Light",
+  "settingsThemeDark": "Dark",
+  "settingsThemeSystem": "System",
+  "settingsLanguageRussian": "Russian",
+  "settingsLanguageEnglish": "English",
+  "settingsLogout": "Log out",
+  "settingsLogoutDialogTitle": "Log out?",
+  "settingsLogoutDialogMessage": "Are you sure you want to log out?",
+  "settingsCancel": "Cancel",
+  "settingsLogoutConfirm": "Log out"
+}

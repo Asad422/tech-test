@@ -1,0 +1,43 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Tech App",
+  "loginWelcomeTitle": "Добро пожаловать!",
+  "loginWelcomeSubtitle": "Войдите чтобы продолжить",
+  "loginEmailLabel": "Email",
+  "loginPasswordLabel": "Пароль",
+  "validationEmailRequired": "Введите email",
+  "validationEmailInvalid": "Введите корректный email",
+  "validationPasswordRequired": "Введите пароль",
+  "validationPasswordMinLength": "Пароль минимум 8 символов",
+  "loginButton": "Войти",
+  "loginOrDivider": "или",
+  "loginWithGoogle": "Войти через Google",
+  "tooltipShowPassword": "Показать пароль",
+  "tooltipHidePassword": "Скрыть пароль",
+  "homeTitle": "Главная",
+  "settingsTitle": "Настройки",
+  "homeGreeting": "Привет, {firstName}",
+  "@homeGreeting": {
+    "placeholders": {
+      "firstName": {
+        "type": "String"
+      }
+    }
+  },
+  "homeBusinessesTitle": "Мои бизнесы",
+  "businessStatusActive": "Активен",
+  "businessStatusInactive": "Неактивен",
+  "settingsSectionAppearance": "Внешний вид",
+  "settingsSectionLanguage": "Язык",
+  "settingsSectionAccount": "Аккаунт",
+  "settingsThemeLight": "Светлая",
+  "settingsThemeDark": "Тёмная",
+  "settingsThemeSystem": "Системная",
+  "settingsLanguageRussian": "Русский",
+  "settingsLanguageEnglish": "English",
+  "settingsLogout": "Выйти из аккаунта",
+  "settingsLogoutDialogTitle": "Выйти из аккаунта?",
+  "settingsLogoutDialogMessage": "Вы уверены что хотите выйти?",
+  "settingsCancel": "Отмена",
+  "settingsLogoutConfirm": "Выйти"
+}
