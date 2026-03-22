@@ -12,6 +12,10 @@ abstract class SettingsLocalDataSource {
 }
 
 class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
+  SettingsLocalDataSourceImpl(this._prefs);
+
+  final SharedPreferences _prefs;
+
   static const _themeKey = 'theme';
   static const _langKey = 'lang';
 
@@ -25,26 +29,22 @@ class SettingsLocalDataSourceImpl implements SettingsLocalDataSource {
 
   @override
   Future<ThemeMode> getThemeMode() async {
-    final prefs = await SharedPreferences.getInstance();
-    return _parseTheme(prefs.getString(_themeKey));
+    return _parseTheme(_prefs.getString(_themeKey));
   }
 
   @override
   Future<void> setThemeMode(ThemeMode mode) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_themeKey, mode.name);
+    await _prefs.setString(_themeKey, mode.name);
   }
 
   @override
   Future<Locale> getLocale() async {
-    final prefs = await SharedPreferences.getInstance();
-    final code = prefs.getString(_langKey) ?? 'ru';
+    final code = _prefs.getString(_langKey) ?? 'ru';
     return Locale(code);
   }
 
   @override
   Future<void> setLocale(Locale locale) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_langKey, locale.languageCode);
+    await _prefs.setString(_langKey, locale.languageCode);
   }
 }

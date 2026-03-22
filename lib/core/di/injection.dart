@@ -1,5 +1,6 @@
 import 'package:get_it/get_it.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tech/features/auth/data/data_sources/email_auth_data_source.dart';
 import 'package:tech/features/auth/data/data_sources/google_auth_data_source.dart';
 import 'package:tech/features/auth/data/data_sources/mock_email_auth_data_source.dart';
@@ -31,7 +32,8 @@ import '../router/app_router.dart';
 
 final getIt = GetIt.instance;
 
-void setupDI() {
+void setupDI(SharedPreferences sharedPreferences) {
+  getIt.registerSingleton<SharedPreferences>(sharedPreferences);
   getIt.registerLazySingleton(() => const FlutterSecureStorage());
   getIt.registerLazySingleton<AuthSessionReader>(
     () => SecureStorageAuthSessionReader(getIt()),
@@ -42,7 +44,7 @@ void setupDI() {
   getIt.registerLazySingleton(() => UserProfileCache(getIt()));
 
   getIt.registerLazySingleton<SettingsLocalDataSource>(
-    () => SettingsLocalDataSourceImpl(),
+    () => SettingsLocalDataSourceImpl(getIt()),
   );
   getIt.registerLazySingleton<SettingsRepository>(
     () => SettingsRepositoryImpl(getIt()),
